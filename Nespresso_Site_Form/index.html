@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/f35d350492.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Enter Account Information | Nespresso</title>
+	</head>
+	<body>
+		<header>
+			<div id="top-logo">
+				<a href="https://www.nespresso.com/fr/en/"
+					><img
+						src="./assets/logo-white.svg"
+						alt="logo-white"
+						title="logo-white"
+						id="logo-white-header"
+				/></a>
+			</div>
+			<div id="header-text">
+				<h3>Already a Nespresso customer ?</h3>
+				<p>
+					Select "Yes" for the question "Have you ever bought Nespresso coffee
+					?"<br />Indicate your client number & postal code
+				</p>
+				<p>Then you can continuously benefit from the rewards program.</p>
+			</div>
+		</header>
+
+		<form action="#index.html" method="post">
+			<fieldset id="account-creation">
+				<div id="account-creation-text">
+					<p>Have you placed an online order before?</p>
+					<p>
+						Then you already have an online account and you can log-in
+						<a
+							href="https://www.nespresso.com/fr/en/secure/login"
+							class="form-a"
+							>here</a
+						>.
+					</p>
+					<p>
+						If not, you can activate your online account below and place your
+						first online order.
+					</p>
+				</div>
+				<table>
+					<tr>
+						<td class="table-labels">
+							<label for="first-name" class="required"
+								>First Name <span class="asterisk">*</span></label
+							>
+						</td>
+						<td class="table-inputs">
+							<input
+								type="text"
+								name="first-name"
+								id="first-name"
+								class="input-fields"
+							/>
+							<span class="error">All inputs with an * are mandatory</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-labels">
+							<label for="last-name" class="required"
+								>Last Name <span class="asterisk">*</span></label
+							>
+						</td>
+						<td class="table-inputs">
+							<input
+								type="text"
+								name="last-name"
+								id="last-name"
+								class="input-fields"
+							/>
+							<span class="error">All inputs with an * are mandatory</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-labels">
+							<label for="email" class="required"
+								>Email address <span class="asterisk">*</span></label
+							>
+						</td>
+						<td class="table-inputs">
+							<input
+								type="email"
+								name="email"
+								id="email"
+								class="input-fields"
+							/>
+							<span class="error">All inputs with an * are mandatory</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-labels">
+							<label for="pwd" class="required"
+								>Password <span class="asterisk">*</span></label
+							>
+						</td>
+						<td class="table-inputs">
+							<input type="password" name="pwd" id="pwd" class="input-fields" />
+							<span class="error"
+								>All inputs with an * are mandatory.<br />You have to include
+								capital letters, numbers and do not use your previous
+								passwords.</span
+							>
+							<div id="password-tip">
+								<i class="fa-solid fa-caret-left"></i>
+								<p>Password must:</p>
+								<ul>
+									<li>Have at least 8<br />characters</li>
+									<li>Contain a<br />number</li>
+									<li>Contain a<br />capital letter</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<div id="club-membership-heading">
+				<h3>NESPRESSO CLUB MEMBERSHIP</h3>
+			</div>
+			<fieldset id="club-membership">
+				<input type="radio" name="club-number" id="no-number" />
+				<label for="no-number" class="radio-label"
+					>No, I do not have a Nespresso Club Membership number.</label
+				>
+				<br />
+				<input type="radio" name="club-number" id="yes-number" checked />
+				<label for="yes-number" class="radio-label"
+					>Yes, I do have a Nespresso Club Membership Number.</label
+				>
+				<div id="membership-container">
+					<table id="membership-table">
+						<tr>
+							<td>
+								<label for="membership-number"
+									>Membership number<span class="asterisk">*</span></label
+								>
+							</td>
+							<td class="membership-inputs">
+								<input
+									type="number"
+									name="membership-number"
+									id="membership-number"
+									class="input-fields"
+								/>
+								<p class="form-a">
+									Where can you find your membership number? >
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="postal-code"
+									>My postal code<span class="asterisk">*</span></label
+								>
+							</td>
+							<td class="membership-inputs">
+								<input
+									type="number"
+									name="postal-code"
+									id="postal-code"
+									class="input-fields"
+								/>
+								<div id="postal-code-tip">
+									<i class="fa-solid fa-caret-left"></i>
+									<p>Please insert a valid<br />Postal Code</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</fieldset>
+			<fieldset id="continue">
+				<p>
+					By clicking on “Continue”, you acknowledge having read
+					<span class="name-footer">Nespresso</span>
+					<a href="https://www.nespresso.com/fr/en/legal" class="form-a"
+						>Privacy Notice</a
+					>.
+				</p>
+				<p>
+					<input type="submit" value="CONTINUE" />
+					<i class="fa-solid fa-angle-right"></i>
+				</p>
+			</fieldset>
+		</form>
+		<section id="language-and-links">
+			<div id="language-selector">
+				<img src="./assets/fr.webp" alt="fr" title="fr" />
+				<select name="language-selection" id="language-selection">
+					<option value="eng">English</option>
+					<option value="fr">Français</option>
+				</select>
+			</div>
+			<div id="footer-links">
+				<div id="top-links">
+					<a
+						href="https://www.nespresso.com/fr/en/service-customer-care"
+						class="footer-a"
+						>CONTACT</a
+					>
+					|
+					<a
+						href="https://www.nespresso.com/boutiques-fr/nous-trouver"
+						class="footer-a"
+						>STORE LOCATOR</a
+					>
+					| <a href="https://www.nespresso.com/evenements/">EVENTS</a> |
+					<a
+						href="https://www.nestle.fr/jobs/search-jobs?keyword=&country=&location=France&career_area=All&company=4441"
+						class="footer-a"
+						>CAREERS</a
+					>
+					|
+					<a href="https://www.nespresso.com/fr/en/presse" class="footer-a"
+						>PRESS ROOM</a
+					>
+					|
+					<a href="https://www.nespresso.com/entreprise/" class="footer-a"
+						>ENTERPRISE DURABLE</a
+					>
+				</div>
+				<div id="bot-links">
+					<a href="https://www.nespresso.com/fr/en/legal" class="footer-a"
+						>LEGAL</a
+					>
+					|
+					<a
+						href="https://www.nespresso.com/shared_res/nc2/docs/FR_NESPRESSO_Charte_concurrence_libre_et_loyale_EN.pdf"
+						class="footer-a"
+						>CODE OF ANTITRUST</a
+					>
+					|
+					<a
+						href="https://www.nespresso.com/ecom/medias/sys_master/public/10341599871006/Communications-techniques-Contact-BV-EN.pdf"
+						class="footer-a"
+						>TECHNICAL COMMUNICATION</a
+					>
+					|
+					<a
+						href="https://www.nespresso.com/ecom/medias/sys_master/public/13628548612126/NESPRESSO-FORMULAIRE-RETRACTATION.pdf?"
+						class="footer-a"
+						>CANCELLATION</a
+					>
+					|
+					<a href="https://www.nespresso.com/fr/en/cookies" class="footer-a"
+						>COOKIES</a
+					>
+					|
+					<a href="https://www.nespresso.com/fr/en/glossary" class="footer-a"
+						>GLOASSARY</a
+					>
+					|
+					<a
+						href="https://www.nespresso.com/fr/en/plan-du-site"
+						class="footer-a"
+						>SITE MAP</a
+					>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="socials">
+				<p>Follow <span class="name-footer">Nespresso</span> on</p>
+				<a href="https://www.facebook.com/Nespresso.FR"
+					><img src="./assets/facebook.svg" alt="facebook" title="facebook"
+				/></a>
+				<a href="https://twitter.com/NespressoFR"
+					><img src="./assets/twitter.svg" alt="twitter" title="twitter"
+				/></a>
+				<a href="https://www.instagram.com/nespresso.fr/"
+					><img src="./assets/insta.svg" alt="insta" title="insta"
+				/></a>
+				<a href="https://www.linkedin.com/company/nestl-nespresso"
+					><img src="./assets/linkedin.svg" alt="linkedin" title="linkedin"
+				/></a>
+			</div>
+			<div id="top-page">
+				<p><a href="#top">Top of the page ^</a></p>
+			</div>
+			<div id="copyright">
+				<a href="https://www.nespresso.com/fr/en/"
+					><img
+						src="./assets/logo-white.svg"
+						alt="logo-white"
+						title="logo-white"
+						id="logo-white-footer"
+				/></a>
+				<p id="copyright-text">
+					<span class="name-footer">Nespresso</span> S.A. 2022
+				</p>
+			</div>
+		</footer>
+		<script src="errorSubmit.js"></script>
+	</body>
+</html>

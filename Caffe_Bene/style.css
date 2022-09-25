@@ -1,0 +1,171 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+h1 {
+    text-align: center;
+}
+
+/* Block and Inline */
+
+#aside-container-block {
+    display: inline-block;
+}
+
+/* Flexbox */
+
+#flex-container {
+    display: flex;
+}
+
+#aside-container-flex {
+    margin-left: 5px;
+}
+
+/* Floats */
+
+.coffeefloat {
+    float: left;
+}
+
+#aside-container-float {
+    float: left;
+    margin-left: 5px;
+}
+
+/* Position Relative and Absolute */
+
+#position-heading {
+    clear: both;
+}
+
+#position-container {
+    position: relative;
+}
+
+#aside-container-position {
+    position: absolute;
+    left: 482px;
+    top: 0px;
+}
+
+/* Float V2 */
+
+.coffeefloatV2 {
+    float: left;
+}
+
+.drinkfloatV2 {
+    margin-left: 5px;
+}
+
+.bagelfloatV2 {
+    margin-left: 5px;
+}
+
+/* Position V2 */
+
+#positionV2-container {
+    position: relative;
+}
+
+ .drinkpositionV2 {
+    position: absolute;
+}
+
+.saladpositionV2 {
+    position: absolute;
+    left: 724px;
+}
+
+/* Block and Inline With Text */
+
+#block-container-text {
+    position: relative;
+}
+
+#aside-container-block-text {
+    display: inline-block;
+}
+
+h3, h4, h5 {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+}
+
+.coffee-text {
+    left: 6.5%;
+    top: 80%;
+}
+
+.drink-text {
+    left: 33.5%;
+    top: 35%;
+}
+
+.salad-text {
+    left: 52%;
+    top: 32.5%;
+}
+
+.bagel-text {
+    left: 37%;
+    top: 82%;
+}
+
+.giftbox-text {
+    left: 65%;
+    top: 85%;
+}
+
+/* Testing */
+
+.img-container {
+    position: relative;
+    width: fit-content;
+}
+
+.text-container {
+    position: absolute;
+    width: 100%;
+    text-align: center; 
+    bottom: 5%;
+    font-size: 1em;
+}
+
+.text-English, .text-Korean {
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+.tea-English, .tea-Korean, .giftbox-English, .giftbox-Korean {
+    font-size: 0.9em;
+}
+
+/* TABLE */
+
+.drink-td {
+    width: 0%;
+}
+
+td {
+    position: relative;
+}
+
+.text-container {
+    bottom: 0;
+    text-align: center;
+}
+
+.text-container h1 {
+    font-size: 150%;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.text-container p {
+    font-size: 80%;
+    margin-top: 0;
+}

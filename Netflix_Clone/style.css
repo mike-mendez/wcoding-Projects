@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-decoration: none;
+    color: #FFF;
+}
+
+h1 {
+	text-align: center;
+}
+
+#movies-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90vw;
+	margin: auto;
+}
+
+.movie-card {
+	cursor: pointer;
+	margin: 0.5rem;
+	position: relative;
+	width: fit-content;
+}
+
+.movie-text {
+	bottom: 0.2125rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.1rem;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+}
+
+.movie-details {
+	display: flex;
+	justify-content: space-between;
+}
+
+.movie-details > span {
+	display: block;
+}

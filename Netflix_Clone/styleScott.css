@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-card {
+    position: relative;
+    width: 426px;
+    margin: 5px;
+}
+
+.movie-info {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    left: 0;
+    right: 0;
+    padding: 3px 8px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: red;
+    font-size: 5em;
+}

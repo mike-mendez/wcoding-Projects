@@ -1,0 +1,629 @@
+@font-face {
+	font-family: "Nanum_Gothic";
+	src: url(./assets/fonts/Nanum_Gothic/NanumGothic-Bold.ttf),
+		url(./assets/fonts/Nanum_Gothic/NanumGothic-ExtraBold.ttf),
+		url(./assets/fonts/Nanum_Gothic/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Noto_Sans_KR";
+	src: url("./assets/fonts/Noto_Sans_KR/NotoSansKR-Black.otf"),
+		url(./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf),
+		url(./assets/fonts/Noto_Sans_KR/NotoSansKR-Light.otf),
+		url(./assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf),
+		url(./assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf),
+		url(./assets/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf);
+}
+
+@font-face {
+	font-family: "Noto_Serif";
+	src: url(./assets/fonts/Noto_Serif/NotoSerif-Bold.ttf),
+		url(./assets/fonts/Noto_Serif/NotoSerif-BoldItalic.ttf),
+		url(./assets/fonts/Noto_Serif/NotoSerif-Italic.ttf),
+		url(./assets/fonts/Noto_Serif/NotoSerif-Regular.ttf);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: "Nanum_Gothic", "Noto_Sans_KR", "Noto_Serif";
+}
+
+body {
+	background-color: #A2A2A2;
+}
+
+main {
+	width: 95vw;
+	margin: 1rem auto;
+}
+
+.main-sections {
+	margin-top: 1.5rem;
+}
+
+/* 
+--------------------------------------------------
+-----------------INTRO----------------------------
+-------------------------------------------------- */
+
+#intro-section {
+	background-color: #357c8c;
+	color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 0;
+	height: 100vh;
+}
+
+#intro-section > img {
+	width: 15rem;
+	/* padding-bottom: 5rem; */
+	padding: 5rem 0;
+}
+
+h1 {
+	display: inline;
+	font-size: 3rem;
+}
+
+#cc {
+	color: #f2be22;
+	padding-top: 6rem;
+}
+
+/* span {
+	opacity: 0;
+	animation: spanVis 3s ease-in-out forwards;
+} */
+
+.intro-part-top {
+	font-size: 2rem;
+	opacity: 0;
+	animation: intro-start 3s ease-in-out forwards;
+}
+
+#intro-section > div > h1 {
+	opacity: 0;
+	animation: intro-start 0.75s ease 1.5s forwards;
+}
+
+#logo {
+	opacity: 0;
+	animation: intro-start 0.75s ease 1s forwards;
+}
+
+#left-text {
+	opacity: 0;
+	animation: left-text-start 0.75s ease 1.5s forwards;
+}
+
+#right-text {
+	opacity: 0;
+	animation: right-text-start 0.75s ease 1.5s forwards;
+}
+
+/* @keyframes intro-start {
+	from {
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+} */
+
+@keyframes intro-start {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes left-text-start {
+	from {
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes right-text-start {
+	from {
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+/* 
+--------------------------------------------------
+-----------------CORE VALUES----------------------
+-------------------------------------------------- */
+
+#core-values-section {
+	background-color: #f2f2f2;
+	border: 2px black solid;
+	padding: 3rem 0;
+	text-align: center;
+}
+
+#core-values-section > p {
+	font-size: 1.5rem;
+}
+
+#core-values-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.value-container > h4 {
+	color: #11388b;
+	font-size: 2rem;
+	opacity: 0;
+}
+
+.value-container > img {
+	padding: 2rem;
+	width: 200px;
+}
+
+.value-container > img:hover ~ h4 {
+	animation: valueVis 1.5s ease-in-out forwards;
+}
+
+@keyframes valueVis {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* 
+--------------------------------------------------
+-----------------STATS SECTION--------------------
+-------------------------------------------------- */
+
+.stats-container {
+	display: flex;
+}
+
+/* STUDENT PROFILE */
+
+.stats-info > h2 {
+	font-size: 2rem;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+table {
+	border-spacing: 30px;
+}
+
+table > tr > td > div {
+	padding-left: 30px;
+}
+.table-imgs {
+	float: left;
+}
+
+#float-clear {
+	clear: both;
+}
+
+/* ------PROGRESS BAR */
+
+@keyframes growProgressBar {
+	0%,
+	33% {
+		--pgPercentage: 0;
+	}
+	100% {
+		--pgPercentage: var(--value);
+	}
+}
+
+@property --pgPercentage {
+	syntax: "<number>";
+	inherits: false;
+	initial-value: 0;
+}
+
+div[role="progressbar"] {
+	--size: 7rem;
+	--fg: #369;
+	--bg: #def;
+	--pgPercentage: var(--value);
+	animation: growProgressBar 2s infinite alternate;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	background: radial-gradient(
+			closest-side,
+			white 80%,
+			transparent 0 99.9%,
+			white 0
+		),
+		conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+	font-size: calc(var(--size) / 5);
+	color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+	counter-reset: percentage var(--value);
+	content: counter(percentage) "%";
+}
+
+/* STATS IMAGES */
+
+.stats-imgs {
+	background-color: #f2f2f2;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 50vh;
+	width: 50%;
+	position: relative;
+	border: 2px black solid;
+}
+
+#sp-img {
+	background-image: url(./assets/images/Unsplash/akson-1K8pIbIrhkQ-unsplash.jpg);
+}
+
+#aff-img {
+	background-image: url(./assets/images/college\ acceptance\ 2022.jpg);
+}
+
+#ap-img {
+	background-image: url(./assets/images/Unsplash/green-chameleon-s9CC2SKySJM-unsplash.jpg);
+}
+
+/* STATS TEXT */
+
+.stats-info {
+	background-color: #357c8c;
+	color: #f2f2f2;
+	margin: auto;
+	height: 50vh;
+	width: 50%;
+}
+
+.stats-info > h2 {
+	text-decoration: underline solid 2px ;
+	text-underline-offset: 7px;
+}
+
+.stats-info > ul {
+	font-size: 1.45rem;
+	display: inline-block;
+	margin: auto;
+	margin-left: 2rem;
+}
+
+.stat-nums {
+	color: #f2be22;
+}
+
+.stats-info > table {
+	margin: auto;
+}
+
+/* 
+--------------------------------------------------
+-----------------STUDENT ART----------------------
+-------------------------------------------------- */
+
+#student-art-section {
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 2rem 0;
+	border: 2px black solid;
+}
+
+#student-art-section > h2 {
+	color: #0b2b40;
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+
+.carousel-wrapper {
+	height: 400px;
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+}
+.carousel-item {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 25px 50px;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 12px;
+}
+
+.arrow-prev {
+	left: -30px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+	right: -30px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+	color: white;
+}
+
+[id^="item"] {
+	display: none;
+}
+
+.item-1 {
+	z-index: 2;
+	opacity: 1;
+	background: url("./assets/images/Art/02.jpg");
+	background-size: cover;
+}
+.item-2 {
+	background: url("./assets/images/Art/03.jpg");
+	background-size: cover;
+}
+.item-3 {
+	background: url("./assets/images/Art/04.jpg");
+	background-size: cover;
+}
+.item-4 {
+	background: url("./assets/images/Art/05.jpg");
+	background-size: cover;
+}
+.item-5 {
+	background: url("./assets/images/Art/06.jpg");
+	background-size: cover;
+}
+.item-6 {
+	background: url("./assets/images/Art/07.jpg");
+	background-size: cover;
+}
+.item-7 {
+	background: url("./assets/images/Art/08.jpg");
+	background-size: cover;
+}
+.item-8 {
+	background: url("./assets/images/Art/09.jpg");
+	background-size: cover;
+}
+.item-9 {
+	background: url("./assets/images/Art/10.jpg");
+	background-size: cover;
+}
+.item-10 {
+	background: url("./assets/images/Art/11.jpg");
+	background-size: cover;
+}
+
+*:target ~ .item-1 {
+	opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+	opacity: 1;
+}
+
+#item-2:target ~ .item-2,
+#item-3:target ~ .item-3,
+#item-4:target ~ .item-4,
+#item-5:target ~ .item-5,
+#item-6:target ~ .item-6,
+#item-7:target ~ .item-7,
+#item-8:target ~ .item-8,
+#item-9:target ~ .item-9,
+#item-10:target ~ .item-10 {
+	z-index: 3;
+	opacity: 1;
+}
+
+/* 
+--------------------------------------------------
+-----------------FORMS SECTION--------------------
+-------------------------------------------------- */
+
+#form-section {
+	display: flex;
+	/* justify-content: space-between; */
+}
+
+#form-t {
+	width: 50%;
+}
+
+.form-container {
+	width: 100%;
+}
+
+#steps-section {
+	background-color: #f2f2f2;
+	width: 50%;
+	border: 2px black solid;
+}
+
+#steps-section > img {
+	padding-top: 1rem;
+	display: block;
+	margin: auto;
+	width: 40rem;
+}
+
+#steps-section > label > h3 {
+	color: #0b2b40;
+	font-size: 2rem;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.step-labels {
+	background-color: #aaa;
+	display: block;
+	padding: 1rem 0;
+}
+
+.step-containers {
+	overflow: hidden;
+	max-height: 0;
+	transition: all 1.5s ease-in-out;
+	border: 2px solid black;
+}
+
+#steps-section > input[type="radio"] {
+	display: none;
+}
+
+#step1:checked ~ #step1-text {
+	max-height: 450px;
+}
+
+#step1:checked ~ #step1-label {
+	background-color: #357c8c;
+	color: #f2f2f2;
+}
+
+#step2:checked ~ #step2-text {
+	max-height: 150px;
+}
+
+#step2:checked ~ #step2-label {
+	background-color: #357c8c;
+	color: #f2f2f2;
+}
+
+#step3:checked ~ #step3-text {
+	max-height: 350px;
+}
+
+#step3:checked ~ #step3-label {
+	background-color: #357c8c;
+	color: #f2f2f2;
+}
+
+#step4:checked ~ #step4-text {
+	max-height: 350px;
+}
+
+#step4:checked ~ #step4-label {
+	background-color: #357c8c;
+	color: #f2f2f2;
+}
+
+/* ----FORM */
+
+.main-sections > h2 {
+	text-align: center;
+	font-size: 2rem;
+}
+
+form {
+	width: 100%;
+}
+
+#form-container {
+	background-color: #357c8c;
+	color: #f2f2f2;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+}
+
+#form-container > div > fieldset > label > img {
+	width: 1.5rem;
+}
+
+fieldset {
+	padding: 1rem 0;
+}
+
+legend {
+	text-align: center;
+}
+
+textarea {
+	width: 100%;
+}
+
+/* 
+--------------------------------------------------
+-----------------FOOTER SECTION--------------------
+-------------------------------------------------- */
+
+footer {
+	background-color: #357c8c;
+	display: flex;
+	justify-content: center;
+}
+
+#footer-contacts {
+	align-self: center;
+	line-height: 2;
+	width: 50%;
+}
+
+#footer-contacts > h3 {
+	color: #f2f2f2;
+}
+
+#footer-map {
+	align-self: center;
+	padding: 2rem 0;
+}
+
+#footer-map > img {
+	display: block;
+	width: 35rem;
+	padding-bottom: 1rem;
+}
+
+.footer-head {
+	color: #f2f2f2;
+	padding-right: 1rem;
+}
+
+.footer-text {
+	color: #aaa;
+	font-size: 0.8rem;
+}
+
+.fax {
+	padding-left: 1rem;
+}

@@ -1,0 +1,16 @@
+INDEX.PHP
+    a. json_decode(file_get_contents("movies.json"));
+    b. loop through movies array and capture contents
+        I. include card.php
+
+CARD.PHP
+    a. Create HTML for card
+    b. Insert values from captured content in INDEX.PHP
+    c. Set poster attribute for video tag
+    d. Wrap video with an anchor tag
+        I. href="watch.php?path=movie.mp4&title="movie.title"
+
+WATCH.PHP
+    a. Get video path from the $_GET superglobal variable
+    b. Create the HTML to show a large video (720p)
+    c. 

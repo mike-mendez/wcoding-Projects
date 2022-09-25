@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'GothamSSm-Book';
+    src: url(./fonts/GothamSSm-Book_Web.woff2);
+}
+
+@font-face {
+    font-family: 'GothamSSm-Medium';
+    src: url(./fonts/GothamSSm-Medium_Web.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'GothamSSm-Book';
+}
+
+html, body {
+    overflow: hidden;
+}
+
+/* ----------HEADER---------- */
+
+header {
+    text-align: center;
+    margin-bottom: 15px;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+#header-text {
+    background-color: white;
+    height: 30px;
+    padding: 16px 16px 5px 16px;
+}
+
+.text-with-links {
+    font-size: 0.9em;
+    text-decoration: 1.5px underline solid rgba(0, 0, 0, 1);
+    text-underline-offset: 3px;
+    transition: box-shadow 0.33s 0s linear;
+}
+
+.text-with-links:hover {
+    box-shadow: 0px 1px black;
+}
+
+/* ----------NAV---------- */
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-family: 'GothamSSm-Medium';
+    font-size: 0.9em;
+    animation: nav-start 1s linear forwards;
+}
+
+#nav-logo {
+    width: 100px;
+    padding: 10px 15px;
+}
+
+nav div {
+    display: inline-block;
+}
+
+.fixed-nav > li {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+#test {
+    background-color: black;
+}
+
+.nav-spacing {
+    padding-left: 120px;
+}
+
+nav ul li {
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+}
+
+nav ul li:hover {
+    background-color: rgba(150, 150, 150, 0.2);
+}
+
+#nav-menu {
+    cursor: pointer;
+}
+
+#nav-menu:hover ~ #side-menu {
+    background-color: rgba(255, 255, 255, 1);
+    right: 0;
+    opacity: 1;
+}
+
+#side-menu {
+    position: fixed;
+    font-size: 1.2em;
+    text-align: left;
+    right: -400px;
+    /* right: 0; */
+    background-color: white;
+    top: 0px;
+    padding: 50px 100px 0px 40px;
+    height: 100vh;
+    opacity: 0;
+    /* opacity: 1; */
+    transition: right 0.7s ease-in-out, background-color 0.75s linear, opacity 0.75s linear;
+    z-index: 1000;
+}
+
+#side-menu:hover {
+    background-color: rgba(255, 255, 255, 1);
+    right: 0;
+    opacity: 1;
+}
+
+#side-menu > ul {
+    list-style-type: none;
+    z-index: 10;
+}
+
+#side-menu > ul > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+#globe {
+    width: 20px;
+    float: left;
+}
+
+#language {
+    padding-left: 30px;
+}
+
+span {
+    font-size: 0.8em;
+    color: gray;
+}
+
+/* 
+    create a separate div for blur effect
+    backdrop-filter: blur() 
+    have side menu with a z-index higher than the blur background
+*/
+
+/* #blur-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 79.5vw;
+    left: 0;
+    top: 0;
+    position: fixed;
+    backdrop-filter: blur(40px);
+    z-index: 3;
+} */
+
+/* ----------HERO---------- */
+
+.hero {
+    text-align: center;
+    padding-top: 150px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.hero-text {
+    font-size: 0.9em;
+    padding-top: 10px;
+}
+
+#model3-hero-heading {
+    opacity: 0;
+    animation: hero-heading-start 0.75s ease 1s forwards;
+}
+
+#model3-hero-text {
+    opacity: 0;
+    animation: hero-heading-start 0.75s ease 1.5s forwards;
+}
+
+/* ----------BUTTONS---------- */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 14.5%;
+    font-size: 0.75em;
+}
+
+.dkgray a {
+    font-family: 'GothamSSm-Medium';
+    background-color: rgba(23, 26, 32, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    border-radius: 20px;
+    padding: 13px 78px;
+    margin-right: 15px;
+}
+
+.ltgray a {
+    font-family: 'GothamSSm-Medium';
+    background-color: rgba(244, 244, 244, 0.65);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 13px 62px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#model3-button-left {
+    opacity: 0;
+    animation: button-left 0.75s ease 1.5s forwards;
+}
+
+#model3-button-right {
+    opacity: 0;
+    animation: button-right 0.75s ease 1.5s forwards;
+}
+
+.buttons-accessories {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 17.5%;
+    font-size: 0.75em;
+}
+
+.black a {
+    font-family: 'GothamSSm-Medium';
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 20px;
+    padding: 13px 95px;
+}
+
+/* ----------SNAP ARROW---------- */
+
+#snap-arrow {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid Meet' width='100' height='100'%3e%3cpath d='M100 5.5c0 1.3-.5 2.6-1.5 3.5L50 57.5 1.5 9c-2-2-2-5.1 0-7.1s5.1-2 7.1 0L50 43.4 91.5 1.9c2-2 5.1-2 7.1 0 .9 1 1.4 2.3 1.4 3.6z'/%3e%3c/svg%3e");
+    background-size: cover;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: 3%;
+    left: 49%;
+    opacity: 0;
+    animation: arrow-drop 0.75s linear 2.5s 1 forwards, bounce 2s cubic-bezier(0.5,0,0,0.75) 0s infinite both;
+}
+
+.snap {
+    scroll-snap-align: center;
+}
+
+/* ----------MAIN---------- */
+
+main {
+    height: 100vh;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.product-img-size {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* ----------MODEL 3---------- */
+
+#model3-main {
+    background-image: url(./images/M3-Homepage-Desktop-LHD.jpg);
+}
+
+/* ----------MODEL Y---------- */
+
+#modely-main {
+    background-image: url(./images/Desktop-ModelY.jpg);
+}
+
+/* ----------MODEL S---------- */
+
+#models-main {
+    background-image: url(./images/Homepage-Model-S-Desktop-LHD.jpg);
+
+}
+
+/* ----------MODEL X---------- */
+
+#modelx-main {
+    background-image: url(./images/Homepage-Model-X-Desktop-LHD.jpg);
+}
+
+/* ----------SOLAR PANELS---------- */
+
+#solar-panels-main {
+    background-image: url(./images/_25-HP-SolarPanels-D.jpg);
+}
+
+/* ----------SOLAR ROOFS---------- */
+
+#solar-roofs-main {
+    background-image: url(./images/HP-SR-Design-D.jpg);
+}
+
+/* ----------ACCESSORIES---------- */
+
+#accessories-main {
+    background-image: url(./images/dd739764-bcaa-4263-9488-8c73bc9fb046.jpg);
+}
+
+/* ----------FOOTER---------- */
+
+footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 3%;
+}
+
+footer > ul > li {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: 'GothamSSm-Medium';
+    font-size: 0.75em;
+    opacity: 0.9;
+}
+
+/* ----------ANIMATIONS---------- */
+
+@keyframes nav-start {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hero-heading-start {
+
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hero-text-start {
+
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes button-left {
+
+    from {
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes button-right {
+
+    from {
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes arrow-drop {
+
+    from {
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounce {
+
+    0%, 10%, 20%, 50%, 80%, 90%, 100% {
+        transform: translateY(0px);
+    }
+
+    30%, 40% {
+        transform: translateY(5px);
+    }
+
+    60% {
+        transform: translateY(3px);
+    }
+
+    70% {
+        transform: translateY(1px);
+    }
+}

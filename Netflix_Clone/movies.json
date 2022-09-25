@@ -1,0 +1,46 @@
+{
+    "movies": [
+        {
+            "title": "The Matrix",
+            "genre": "sci-fi/action",
+            "duration": "2h 16m",
+            "filename": "The_Matrix.mp4",
+            "poster": "the_matrix.jpg"
+        },
+        {
+            "title": "Thor: Love and Thunder",
+            "genre": "action/adventure",
+            "duration": "1h 59m",
+            "filename": "Thor_Love_and_Thunder.mp4",
+            "poster": "thor_love_and_thunder.webp"
+        },
+        {
+            "title": "Lord of the Rings",
+            "genre": "fantasy/adventure",
+            "duration": "2h 58m",
+            "filename": "LOTR_FOTR.mp4",
+            "poster": "lotr.webp"
+        },
+        {
+            "title": "Idiocracy",
+            "genre": "comedy/sci-fi",
+            "duration": "1h 24m",
+            "filename": "Idiocracy.mp4",
+            "poster": "idiocracy.jpg"
+        },
+        {
+            "title": "The Notebook",
+            "genre": "romance/drama",
+            "duration": "2h 3m",
+            "filename": "The_Notebook.mp4",
+            "poster": "the_notebook.jpg"
+        },
+        {
+            "title": "Shrek",
+            "genre": "comedy/fantasy",
+            "duration": "1h 30m",
+            "filename": "Shrek.mp4",
+            "poster": "shrek.jpg"
+        }
+    ]
+}

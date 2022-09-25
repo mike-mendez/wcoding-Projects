@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: 0;
+}
+
+#tictactoe-board {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    margin-right: 10rem;
+}
+
+body {
+  display: flex;
+}
+.board-space {
+  background: #444;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAA;
+}
+
+.x {
+    color: red;
+    font-size: 10em;
+}
+
+.o {
+    color: dodgerblue;
+    font-size: 10em;
+}
+
+.winningText {
+  transform: scale(1.5);
+  transition: all 1s;
+}
+
+.winningBox {
+  background-color: green;
+  transition: all 1s;
+}
+
+fieldset {
+  width: 20rem;
+}
+
+legend {
+  text-align: center;
+}
+
+.winner {
+  text-align: center;
+}

@@ -1,0 +1,4 @@
+# list of files to not push to gitHub
+.DS_Store
+/Netflix_Clone/videos/
+/Brochure_Project/assets/
